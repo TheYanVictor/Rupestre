@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "671949628227",
+    "project_id": "geoinfo-firebase",
+    "storage_bucket": "geoinfo-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671949628227:android:6087456e7c264336d445f6",
+        "android_client_info": {
+          "package_name": "com.example.rupestre_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASdRmxsS6v058KMyVeMFj4CsgK4A4rFhU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
