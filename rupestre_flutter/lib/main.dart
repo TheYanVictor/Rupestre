@@ -1,20 +1,30 @@
+import 'package:device_preview/device_preview.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MainApp());
-}
+import 'firebase_options.dart';
+import 'view/cadastrar_view.dart';
+import 'view/login_view.dart';
+import 'view/principal_view.dart';
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+Future<void> main() async {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+  runApp(
+    DevicePreview(
+      enabled: true,
+      builder: (context) => MaterialApp(
+        useInheritedMediaQuery: true,
+        debugShowCheckedModeBanner: false,
+        initialRoute: 'login',
+        routes: {
+          'cadastrar': (context) => const CadastrarView(),
+          'login': (context) => const LoginView(),
+          'principal': (context) => const PrincipalView(),
+        },
       ),
-    );
-  }
+    ),
+  );
 }
